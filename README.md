@@ -1,45 +1,57 @@
-<img src="https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png" style="margin: 0;">
+# Ball Catching Game
 
-Welcome USER_NAME,
+## Project Summary
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use.
+Code Institute Milestone Project 2 - Interactive Frontend Development.
 
-## Gitpod Reminders
+The objective of this project is to build a skill based game for rugby players and fans to catch balls.
+I am an ex player and fan and spent a lot of time at full back. This meant catching a lot of kicks. 
+I enjoyed this dynamic on the field and therefore decided to create a game version.
+This game requires users to be alert and respond to the balls dropping as they would from kicks in a game.
+The users must adjust their position in order to gather the ball. 
+The user cannot let a ball drop or a life is lost. 
+The user gets a score for each catch maintained on a counter and visible to the user.
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
+# UX
 
-`python3 -m http.server`
+#### Strategy
 
-A blue button should appear to click: *Make Public*,
+The overall aim of this project is to create a ball catching game for users to enjoy. 
+The game must be possible to lose, and also scores made available to the user.
 
-Another blue button should appear to click: *Open Browser*.
+#### Scope
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
+The site will include the game itself, with instructions on how to play, the ability to start the game,
+lose the game, and track score. 
 
-A blue button should appear to click: *Make Public*,
+#### Structure
 
-Another blue button should appear to click: *Open Browser*.
+The website will be delivered on one page which is the game itself. 
 
-In Gitpod you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+#### Skeleton
 
-## Updates Since The Instructional Video
+The navigation will be limited to one page, but of course must be intuitive in terms of instructions 
+on how to play and buttons to initiate. 
 
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
+#### Surface
 
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
+The format of the page will follow function where colour schemes align with a rugby field. 
 
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
+#### User Stories
 
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
+##### Site users
 
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
+- As a player, I want to be able to play a game that simulates an element of a sport that I love.
+- As a player, I want to have clear instructions on the controls and rules.
+- As a player, I want to be able to control when the game starts.
+- As a player, I want to be see my score as I go along. 
+- As a player, I want to see my end score.
+- As a player, I want the game to become more difficult as it progresses.
+- As a player, I want to be able to contact the developer for details on this game and others.
 
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
+##### Site Owner
 
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
-
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
-
---------
-
-Happy coding!
+-  As the owner, I want to be able to showcase my game.
+-  As the owner, I want players to find it challenging so they play it again and again.
+-  As the owner, I want players to be able to contact me with feedback.
+-  As the owner, I want to garner followers on social media. 
