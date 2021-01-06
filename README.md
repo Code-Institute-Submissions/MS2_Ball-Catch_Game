@@ -55,3 +55,38 @@ The format of the page will follow function where colour schemes align with a ru
 -  As the owner, I want players to find it challenging so they play it again and again.
 -  As the owner, I want players to be able to contact me with feedback.
 -  As the owner, I want to garner followers on social media. 
+
+#### Wireframes
+
+The home page contains a header with the name of the game and a contact button 
+to navigate to a page that allows contact with the developer via form.
+Below this are the instructions on how to play the game and the "start", button.
+The footer contains social media links of the developer.
+
+##### Home page - Desktop
+![Home Desktop Wireframe](/readme_images/home.desktop.png)
+
+##### Home page - Mobile
+![Home Mobile Wireframe](/readme_images/home.mobile.png)
+
+The game takes up the screen once started. The score is displayed 
+bottom left and the lives count bottom right.
+There is a "Home", button to return to the home page.
+
+##### Game page - Desktop
+![Game Desktop Wireframe](/readme_images/game.desktop.png)
+
+##### Game page - Mobile
+![Game Mobile Wireframe](/readme_images/game.mobile.png)
+
+The homepage contains a header with the name of the game and a Home button 
+to return to the home page.
+Below this in the main body is a contact form including name, email and message.
+In line with the home page, the footer contains the social media links of the 
+developer.
+
+##### Contact page - Desktop
+![Contact Desktop Wireframe](/readme_images/contact.desktop.png)
+
+##### Contact page - Mobile
+![Contact Mobile Wireframe](/readme_images/contact.mobile.png)
