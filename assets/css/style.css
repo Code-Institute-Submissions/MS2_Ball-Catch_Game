@@ -17,3 +17,11 @@ header {
 #game-area {
     margin-top: 10px;
 }
+
+/* Contact Page */
+
+.contact-intro {
+    padding-top: 75px;
+    background-color: red;
+}
+
