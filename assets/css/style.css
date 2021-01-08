@@ -5,7 +5,15 @@ header {
     color: #f0f8ffbd;
 }
 
+/* Home Page */
+
 .instruction {
     padding-top: 75px;
     background-color: red;
+}
+
+/* Game Page */
+
+#game-area {
+    margin-top: 140px;
 }
