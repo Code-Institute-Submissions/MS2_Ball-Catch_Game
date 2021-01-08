@@ -1,0 +1,11 @@
+/* Header */
+
+header {
+    background-color: rgb(39, 36, 36);
+    color: #f0f8ffbd;
+}
+
+.instruction {
+    padding-top: 75px;
+    background-color: red;
+}
