@@ -1,9 +1,10 @@
+document.getElementById("game-area").classList.toggle("hidden");
+document.getElementById("start-game").addEventListener("click", startGame);
+
 function startGame() {
-    let start = document.getElementById("game-area");
-    let game = document.getElementsByClassName("game-intro");
-    for (let i = 0; i < game.length; i++) {
-        game[i].style.display = "none";
-    }
-    start.style.display = "block"; 
+    document.getElementById("game-area").classList.toggle("hidden");
+    document.getElementById("home-header").classList.toggle("hidden");
+    document.getElementById("game-intro").classList.toggle("hidden");
 }
+
 
