@@ -7,4 +7,19 @@ function startGame() {
     document.getElementById("game-intro").classList.toggle("hidden");
 }
 
+$(function(){
+    resizeCanvas();
+});
+
+$(window).on("resize", function(){
+    resizeCanvas();
+});
+
+function resizeCanvas()
+{
+    let canvas = $("#canvas");
+    canvas.css("width", $(window).width());
+    canvas.css("height", $(window).height());
+}
+
 
