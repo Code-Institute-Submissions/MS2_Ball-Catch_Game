@@ -12,6 +12,10 @@ header {
     background-color: red;
 }
 
+.hidden {
+    display: none;
+}
+
 /* Game Page */
 
 #game-area {
