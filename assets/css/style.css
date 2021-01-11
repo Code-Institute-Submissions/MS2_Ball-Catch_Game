@@ -26,6 +26,12 @@ header {
     background-color: aqua; /* testing canvas sizes */
 }
 
+#game-home {
+    position: fixed;
+    top: 12px;
+    right: 2px;
+}
+
 /* Contact Page */
 
 .contact-intro {
