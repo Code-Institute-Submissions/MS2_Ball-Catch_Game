@@ -28,13 +28,18 @@ function resizeCanvas() {
     canvas.css("height", $(window).height());
 }
 
-function draw() {
-    ctx.clearRect(0, 0, canvas.width, canvas.height);
+function drawFireBall() {
     ctx.beginPath();
     ctx.arc(x, y, r, 0, 2 * Math.PI);
     ctx.fillStyle = "red";
     ctx.fill();
     ctx.closePath();
+}
+
+
+function draw() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    drawFireBall();
     y += fy;
 }
 setInterval(draw, 100);
