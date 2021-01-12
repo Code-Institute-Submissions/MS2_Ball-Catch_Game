@@ -3,7 +3,7 @@ document.getElementById("start-game").addEventListener("click", startGame);
 
 let canvas = document.getElementById("canvas");
 let ctx = canvas.getContext("2d");
-let x = 5;
+let x = Math.floor(Math.random() * (canvas.width - 5));
 let y = 5;
 let r = 5;
 let fy = 2;
