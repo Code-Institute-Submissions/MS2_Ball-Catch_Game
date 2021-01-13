@@ -1,19 +1,3 @@
-document.getElementById("game-area").classList.toggle("hidden");
-document.getElementById("start-game").addEventListener("click", startGame);
-
-let canvas = document.getElementById("canvas");
-let ctx = canvas.getContext("2d");
-let x = Math.floor(Math.random() * (canvas.width - 5));
-let y = 5;
-let r = 5;
-let fy = 2;
-
-function startGame() {
-    document.getElementById("game-area").classList.toggle("hidden");
-    document.getElementById("home-header").classList.toggle("hidden");
-    document.getElementById("game-intro").classList.toggle("hidden");
-}
-
 $(function () {
     resizeCanvas();
 });
@@ -26,6 +10,22 @@ function resizeCanvas() {
     let canvas = $("#canvas");
     canvas.css("width", $(window).width());
     canvas.css("height", $(window).height());
+}
+
+document.getElementById("game-area").classList.toggle("hidden");
+document.getElementById("start-game").addEventListener("click", startGame);
+
+let canvas = document.getElementById("canvas");
+let ctx = canvas.getContext("2d");
+let x = Math.floor(Math.random() * (canvas.width - 5));
+let y = 5;
+let r = 5;
+let fy = .2;
+
+function startGame() {
+    document.getElementById("game-area").classList.toggle("hidden");
+    document.getElementById("home-header").classList.toggle("hidden");
+    document.getElementById("game-intro").classList.toggle("hidden");
 }
 
 function drawFireBall() {
@@ -41,8 +41,10 @@ function draw() {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
     drawFireBall();
     y += fy;
+    requestAnimationFrame(draw);
 }
-setInterval(draw, 100);
+
+draw();
 
 
 
