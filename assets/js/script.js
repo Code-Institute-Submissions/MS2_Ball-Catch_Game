@@ -22,11 +22,13 @@ let y = 5;
 let r = 5;
 let fy = .2;
 
+
 function startGame() {
     document.getElementById("game-area").classList.toggle("hidden");
     document.getElementById("home-header").classList.toggle("hidden");
     document.getElementById("game-intro").classList.toggle("hidden");
 }
+
 
 function drawFireBall() {
     ctx.beginPath();
@@ -45,6 +47,7 @@ function draw() {
 }
 
 draw();
+
 
 
 
