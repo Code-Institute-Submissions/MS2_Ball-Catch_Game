@@ -17,10 +17,12 @@ document.getElementById("start-game").addEventListener("click", startGame);
 
 let canvas = document.getElementById("canvas");
 let ctx = canvas.getContext("2d");
-let x = Math.floor(Math.random() * (canvas.width - 5));
-let y = 5;
+//let x = Math.floor(Math.random() * (canvas.width - 5));
+//let y = 5;
 let r = 5;
 let fy = .2;
+let fireBalls = [];
+let fireBallSpeed = 1;
 
 
 function startGame() {
@@ -30,6 +32,35 @@ function startGame() {
 }
 
 
+function createFireBalls() {
+    let fireBall = {
+        x: Math.random() * (canvas.width - 10) + 5,
+        y: 5,
+    }
+    fireBalls.push(fireBall);
+}
+
+function dropFireBalls() {
+    createFireBalls();
+    requestAnimationFrame(dropFireBalls);
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    
+    for (let i = 0; i < fireBalls; i++) {
+        let fireBall = fireBalls[i];
+        fireBall.y += fireBallSpeed;
+        ctx.beginPath();
+        ctx.arc(fireBall.x, fireBall.y, 8, 0, Math.PI * 2);
+        ctx.fillStyle = "red";
+        ctx.fill();
+        ctx.closePath();
+        
+    }
+}
+dropFireBalls();
+
+
+
+/*
 function drawFireBall() {
     ctx.beginPath();
     ctx.arc(x, y, r, 0, 2 * Math.PI);
@@ -37,7 +68,6 @@ function drawFireBall() {
     ctx.fill();
     ctx.closePath();
 }
-
 
 function draw() {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
@@ -48,7 +78,4 @@ function draw() {
 
 draw();
 
-
-
-
-
+*/
