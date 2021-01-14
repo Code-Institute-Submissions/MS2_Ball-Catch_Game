@@ -25,6 +25,7 @@ let fireBalls = [];
 let fireBallSpeed = 1;
 let fireBallRate = 2000;
 let lastFireBall = -1;
+let colors = ["red", "green", "orange"];
 
 
 
@@ -36,7 +37,9 @@ function startGame() {
 
 
 function createFireBalls() {
+    let color = colors[Math.floor(Math.random() * colors.length)];
     let fireBall = {
+        c: color,
         x: Math.random() * (canvas.width - 10) + 5,
         y: 5,
     }
@@ -58,7 +61,7 @@ function dropFireBalls() {
         fireBall.y += fireBallSpeed;
         ctx.beginPath();
         ctx.arc(fireBall.x, fireBall.y, r, 0, Math.PI * 2);
-        ctx.fillStyle = "red";
+        ctx.fillStyle = fireBall.c;
         ctx.fill();
         ctx.closePath();
         
