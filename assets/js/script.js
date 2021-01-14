@@ -20,9 +20,12 @@ let ctx = canvas.getContext("2d");
 //let x = Math.floor(Math.random() * (canvas.width - 5));
 //let y = 5;
 let r = 5;
-let fy = .2;
+//let fy = .2;
 let fireBalls = [];
 let fireBallSpeed = 1;
+let fireBallRate = 2000;
+let lastFireBall = -1;
+
 
 
 function startGame() {
@@ -41,15 +44,20 @@ function createFireBalls() {
 }
 
 function dropFireBalls() {
-    createFireBalls();
+    let timeStamp = Date.now();
+    if (timeStamp > (lastFireBall + fireBallRate)) {
+        lastFireBall = timeStamp;
+        createFireBalls();
+    }
+    
     requestAnimationFrame(dropFireBalls);
     ctx.clearRect(0, 0, canvas.width, canvas.height);
     
-    for (let i = 0; i < fireBalls; i++) {
+    for (let i = 0; i < fireBalls.length; i++) {
         let fireBall = fireBalls[i];
         fireBall.y += fireBallSpeed;
         ctx.beginPath();
-        ctx.arc(fireBall.x, fireBall.y, 8, 0, Math.PI * 2);
+        ctx.arc(fireBall.x, fireBall.y, r, 0, Math.PI * 2);
         ctx.fillStyle = "red";
         ctx.fill();
         ctx.closePath();
@@ -57,6 +65,7 @@ function dropFireBalls() {
     }
 }
 dropFireBalls();
+
 
 
 
