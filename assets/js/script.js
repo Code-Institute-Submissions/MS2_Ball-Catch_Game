@@ -1,10 +1,9 @@
-$(function () {
-    resizeCanvas();
-});
+//$(function () {
+//  resizeCanvas();
+//});
 
-$(window).on("resize", function () {
-    resizeCanvas();
-});
+$(window).on("resize", resizeCanvas());
+$(window).on("load", resizeCanvas());
 
 function resizeCanvas() {
     let canvas = $("#canvas");
@@ -53,32 +52,34 @@ function fireballs() {
         fireBall.y += fireBallSpeed;
         ctx.beginPath();
         ctx.arc(fireBall.x, fireBall.y, r, 0, Math.PI * 2);
-        ctx.fillStyle = fireBall.c;        
+        ctx.fillStyle = fireBall.c;
         ctx.fill();
         ctx.closePath();
-        
+
     }
 }
-/*
+
 function warrior() {
-    let img = new Image()
-img.src = "../images/defender.png";
-img.onload = () => {
-  ctx.drawImage(img, 0, 0);
+    let img = new Image
+
+    //img.onload = () => {
+    ctx.drawImage(img, 0, 0);
+    //}
+
+    img.src = "assets/images/defender.png";
 }
-}
-*/
+
 function draw() {
     let timeStamp = Date.now();
     if (timeStamp > (lastFireBall + fireBallRate)) {
         lastFireBall = timeStamp;
         createFireBalls();
     }
-    
+
     requestAnimationFrame(draw);
     ctx.clearRect(0, 0, canvas.width, canvas.height);
     fireballs();
-    //warrior();
+    warrior();
 }
 draw();
 
@@ -90,22 +91,22 @@ function dropFireBalls() {
         lastFireBall = timeStamp;
         createFireBalls();
     }
-    
+
     requestAnimationFrame(dropFireBalls);
     ctx.clearRect(0, 0, canvas.width, canvas.height);
 
-    
 
-    
+
+
     for (let i = 0; i < fireBalls.length; i++) {
         let fireBall = fireBalls[i];
         fireBall.y += fireBallSpeed;
         ctx.beginPath();
         ctx.arc(fireBall.x, fireBall.y, r, 0, Math.PI * 2);
-        ctx.fillStyle = fireBall.c;        
+        ctx.fillStyle = fireBall.c;
         ctx.fill();
         ctx.closePath();
-        
+
     }
 }
 dropFireBalls();
@@ -113,7 +114,7 @@ dropFireBalls();
 */
 /*
 let img = new Image();
-    img.src = "../images/defender.png";   
+    img.src = "../images/defender.png";
     ctx.drawImage(img, 15, 15);
 */
 /*
