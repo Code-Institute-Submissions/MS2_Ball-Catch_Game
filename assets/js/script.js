@@ -31,7 +31,7 @@ let fireBallSpeed = 1;
 let fireBallRate = 2000;
 let lastFireBall = -1;
 let colors = ["red", "green", "orange"];
-let warriorx = 100;
+let warriorx = (canvas.width - 80) / 2;
 let rightPressed = false;
 let leftPressed = false;
 
@@ -73,7 +73,7 @@ function warrior() {
    // let ctx = canvas2.getContext("2d");
     img = new Image();
     img.onload = function() {
-        ctx2.clearRect(0, 0,  canvas2.width, canvas2.height);
+        ctx2.clearRect(0, 0,  canvas.width, canvas.height);
         ctx2.drawImage(img, warriorx, -20, 80, 200);
     }
     img.src = "assets/images/defender.png"
@@ -111,9 +111,15 @@ function draw() {
     warrior();
     if (rightPressed) {
         warriorx += 7;
+         if (warriorx + 80 > canvas.width) {
+                    warriorx = canvas.width - 80;
+                }
     }
     else if (leftPressed) {
         warriorx -= 7;
+        if (warriorx < 0) {
+                    warriorx = 0;
+                }
     }
     requestAnimationFrame(draw);
 }
