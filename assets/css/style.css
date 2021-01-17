@@ -24,15 +24,15 @@ header {
 
 #canvas {
    background-color: aqua; /* testing canvas sizes */
-   position: relative;
+  position: relative;
 } 
 
 #warrior {
-    background-color: green;
-   position: absolute;
-   left: 0;
+   /* background-color: green; */
+    height: 20vh;
+    position: absolute;
+     left: 0;
    bottom: 0;
-   width: 100px;
 } 
 
 

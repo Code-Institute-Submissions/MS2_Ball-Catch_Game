@@ -7,8 +7,10 @@ $(window).on("load", resizeCanvas());
 
 function resizeCanvas() {
     let canvas = $("#canvas");
+    let canvas2 = $("#warrior");
     canvas.css("width", $(window).width());
     canvas.css("height", $(window).height());
+    canvas2.css("width", $(window).width());
 }
 
 document.getElementById("game-area").classList.toggle("hidden");
@@ -64,7 +66,7 @@ function warrior() {
     let ctx = canvas2.getContext("2d");
     img = new Image();
     img.onload = function() {
-        ctx.drawImage(img, 20, -45, 240, 240);
+        ctx.drawImage(img, 100, -20, 80, 200);
     }
     img.src = "assets/images/defender.png"
 }
