@@ -60,13 +60,13 @@ function fireballs() {
 }
 
 function warrior() {
-    let img = new Image
-
-    //img.onload = () => {
-    ctx.drawImage(img, 0, 0);
-    //}
-
-    img.src = "assets/images/defender.png";
+    let canvas2 = document.getElementById("warrior");
+    let ctx = canvas2.getContext("2d");
+    img = new Image();
+    img.onload = function() {
+        ctx.drawImage(img, 10, 10, 240, 240);
+    }
+    img.src = "assets/images/defender.png"
 }
 
 function draw() {
@@ -75,7 +75,6 @@ function draw() {
         lastFireBall = timeStamp;
         createFireBalls();
     }
-
     requestAnimationFrame(draw);
     ctx.clearRect(0, 0, canvas.width, canvas.height);
     fireballs();

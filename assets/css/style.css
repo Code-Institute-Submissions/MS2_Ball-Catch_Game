@@ -23,8 +23,13 @@ header {
 }
 
 #canvas {
-    background-color: aqua; /* testing canvas sizes */
-}
+   background-color: aqua; /* testing canvas sizes */
+} 
+
+#warrior {
+   background-color: green; 
+} 
+
 
 #game-home {
     position: fixed;
