@@ -109,16 +109,18 @@ function draw() {
     //ctx2.clearRect(0, 0, canvas2.width, canvas2.height);
     fireballs();
     warrior();
+    
+
     if (rightPressed) {
         warriorx += 7;
          if (warriorx + 80 > canvas.width) {
-                    warriorx = canvas.width - 80;
+                    warriorx = canvas.width - 60;
                 }
     }
     else if (leftPressed) {
         warriorx -= 7;
         if (warriorx < 0) {
-                    warriorx = 0;
+                    warriorx = -20;
                 }
     }
     requestAnimationFrame(draw);
