@@ -24,10 +24,15 @@ header {
 
 #canvas {
    background-color: aqua; /* testing canvas sizes */
+   position: relative;
 } 
 
 #warrior {
-   background-color: green; 
+    background-color: green;
+   position: absolute;
+   left: 0;
+   bottom: 0;
+   width: 100px;
 } 
 
 
@@ -35,6 +40,7 @@ header {
     position: fixed;
     top: 12px;
     right: 2px;
+    z-index: 1;
 }
 
 /* Contact Page */

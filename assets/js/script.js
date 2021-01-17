@@ -64,7 +64,7 @@ function warrior() {
     let ctx = canvas2.getContext("2d");
     img = new Image();
     img.onload = function() {
-        ctx.drawImage(img, 10, 10, 240, 240);
+        ctx.drawImage(img, 20, -45, 240, 240);
     }
     img.src = "assets/images/defender.png"
 }
