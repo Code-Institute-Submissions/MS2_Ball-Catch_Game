@@ -15,6 +15,8 @@ function resizeCanvas() {
 
 document.getElementById("game-area").classList.toggle("hidden");
 document.getElementById("start-game").addEventListener("click", startGame);
+document.addEventListener("keydown", keyDownHandler, false);
+document.addEventListener("keyup", keyUpHandler, false);
 
 let canvas = document.getElementById("canvas");
 let ctx = canvas.getContext("2d");
@@ -27,6 +29,7 @@ let fireBallSpeed = 1;
 let fireBallRate = 2000;
 let lastFireBall = -1;
 let colors = ["red", "green", "orange"];
+let warriorx = 100;
 
 
 
@@ -66,10 +69,29 @@ function warrior() {
     let ctx = canvas2.getContext("2d");
     img = new Image();
     img.onload = function() {
-        ctx.drawImage(img, 100, -20, 80, 200);
+        ctx.drawImage(img, warriorx, -20, 80, 200);
     }
     img.src = "assets/images/defender.png"
 }
+
+function keyDownHandler(e) {
+    if (e.key == "Right" || e.key == "ArrowRight") {
+        rightPressed = true;
+    }
+    else if (e.key == "Left" || e.key == "ArrowLeft") {
+        leftPressed = true;
+    }
+}
+
+function keyUpHandler(e) {
+    if (e.key == "Right" || e.key == "ArrowRight") {
+        rightPressed = false;
+    }
+    else if (e.key == "Left" || e.key == "ArrowLeft") {
+        leftPressed = false;
+    }
+}
+
 
 function draw() {
     let timeStamp = Date.now();
@@ -81,6 +103,13 @@ function draw() {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
     fireballs();
     warrior();
+    if (rightPressed) {
+        warriorx += 7;
+    }
+
+            else if (leftPressed) {
+    warriorx -= 7;
+            }
 }
 draw();
 
