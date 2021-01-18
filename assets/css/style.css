@@ -43,6 +43,13 @@ header {
     z-index: 1;
 }
 
+#score {
+    position: fixed;
+    top: 40px;
+    right: 10px;
+    z-index: 1;
+}
+
 /* Contact Page */
 
 .contact-intro {
