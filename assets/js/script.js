@@ -28,7 +28,7 @@ let ctx2 = canvas2.getContext("2d");
 let r = 5;
 //let fy = .2;
 let fireBalls = [];
-let fireBallSpeed = 1;
+let fireBallSpeed = .5;
 let fireBallRate = 2000;
 let lastFireBall = -1;
 let colors = ["red", "green", "orange"];
@@ -36,6 +36,7 @@ let warriorx = (canvas.width - 80) / 2;
 let rightPressed = false;
 let leftPressed = false;
 let lives = 3;
+let score = 0;
 
 
 
@@ -65,9 +66,7 @@ function fireballs() {
         ctx.arc(fireBall.x, fireBall.y, r, 0, Math.PI * 2);
         ctx.fillStyle = fireBall.c;
         ctx.fill();
-        ctx.closePath();
-        
-        
+        ctx.closePath();       
     }
 }
 
@@ -75,17 +74,24 @@ function strike() {
     for (let s = 0; s < fireBalls.length; s++) {
         let fireBall = fireBalls[s];
         fireBall.y += fireBallSpeed;
-    if (fireBall.y > canvas.height) {
+        fireBall.x = fireBall.x;
+        
+      if (fireBall.x > warriorx && fireBall.x < warriorx + warrior.length && fireBall.y == canvas.height - 20 ) {
+            score += 1;
+            document.getElementById("score-count").innerHTML = score;
+        } 
+        /*
+    else  if 
+      (fireBall.y > canvas.height) 
              {
                 alert("Game Over");
                 document.location.reload();
                 clearInterval(interval);
-            }
-           
+            }    */     
         }
     }
-}
 
+    
 
 function warrior() {
     //let canvas2 = document.getElementById("warrior");
