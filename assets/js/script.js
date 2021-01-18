@@ -67,7 +67,15 @@ function fireballs() {
         ctx.fill();
         ctx.closePath();
         
-        if (fireBall.y > canvas.height) {
+        
+    }
+}
+
+function strike() {
+    for (let s = 0; s < fireBalls.length; s++) {
+        let fireBall = fireBalls[s];
+        fireBall.y += fireBallSpeed;
+    if (fireBall.y > canvas.height) {
              {
                 alert("Game Over");
                 document.location.reload();
@@ -77,6 +85,7 @@ function fireballs() {
         }
     }
 }
+
 
 function warrior() {
     //let canvas2 = document.getElementById("warrior");
@@ -120,6 +129,7 @@ function draw() {
     //ctx2.clearRect(0, 0, canvas2.width, canvas2.height);
     fireballs();
     warrior();
+    strike();
     
 
     
