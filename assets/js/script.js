@@ -15,6 +15,7 @@ function resizeCanvas() {
 
 document.getElementById("game-area").classList.toggle("hidden");
 document.getElementById("start-game").addEventListener("click", startGame);
+document.getElementById("start-game").addEventListener("click", draw);
 document.addEventListener("keydown", keyDownHandler, false);
 document.addEventListener("keyup", keyUpHandler, false);
 
@@ -34,6 +35,7 @@ let colors = ["red", "green", "orange"];
 let warriorx = (canvas.width - 80) / 2;
 let rightPressed = false;
 let leftPressed = false;
+let lives = 3;
 
 
 
@@ -64,7 +66,15 @@ function fireballs() {
         ctx.fillStyle = fireBall.c;
         ctx.fill();
         ctx.closePath();
-
+        
+        if (fireBall.y > canvas.height) {
+             {
+                alert("Game Over");
+                document.location.reload();
+                clearInterval(interval);
+            }
+           
+        }
     }
 }
 
@@ -78,6 +88,7 @@ function warrior() {
     }
     img.src = "assets/images/defender.png"
 }
+
 
 function keyDownHandler(e) {
     if (e.key == "Right" || e.key == "ArrowRight") {
@@ -111,6 +122,8 @@ function draw() {
     warrior();
     
 
+    
+
     if (rightPressed) {
         warriorx += 7;
          if (warriorx + 80 > canvas.width) {
@@ -125,7 +138,8 @@ function draw() {
     }
     requestAnimationFrame(draw);
 }
-draw();
+
+//draw();
 
 /*
 
