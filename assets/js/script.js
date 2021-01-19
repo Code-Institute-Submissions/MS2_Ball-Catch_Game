@@ -54,13 +54,15 @@ function createFireBalls() {
         c: color,
         x: Math.random() * (canvas.width - 10) + 5,
         y: 5,
+        status: 1,
     }
     fireBalls.push(fireBall);
 }
 
-function fireballs() {
+function fireBallsDrop() {
     for (let i = 0; i < fireBalls.length; i++) {
         let fireBall = fireBalls[i];
+        if(fireBalls[i].status == 1) {
         fireBall.y += fireBallSpeed;
         ctx.beginPath();
         ctx.arc(fireBall.x, fireBall.y, r, 0, Math.PI * 2);
@@ -68,19 +70,37 @@ function fireballs() {
         ctx.fill();
         ctx.closePath();       
     }
+    }
 }
 
 function strike() {
     for (let s = 0; s < fireBalls.length; s++) {
         let fireBall = fireBalls[s];
         fireBall.y += fireBallSpeed;
-        fireBall.x = fireBall.x;
-        
+        fireBall.x = fireBall.x;    
+        if (fireBall.status == 1) {
+        if (fireBall.y + fireBallSpeed > canvas.height - 50) {
+                if (fireBall.x > warriorx && fireBall.x < warriorx + 80) {
+                    fireBall.status = 0; 
+                    score += 1;
+            document.getElementById("score-count").innerHTML = score;
+                }
+                else if (fireBall.y > canvas.height) 
+             {
+                alert("Game Over");
+                document.location.reload();
+                clearInterval(interval);
+             }
+            }    
+    }
+
+       
+    /*
       if (fireBall.x > warriorx && fireBall.x < warriorx + warrior.length && fireBall.y == canvas.height - 20 ) {
             score += 1;
             document.getElementById("score-count").innerHTML = score;
         } 
-        /*
+        
     else  if 
       (fireBall.y > canvas.height) 
              {
@@ -133,9 +153,10 @@ function draw() {
     //requestAnimationFrame(draw);
     ctx.clearRect(0, 0, canvas.width, canvas.height);
     //ctx2.clearRect(0, 0, canvas2.width, canvas2.height);
-    fireballs();
+    fireBallsDrop();
     warrior();
     strike();
+    
     
 
     
