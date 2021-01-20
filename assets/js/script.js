@@ -28,7 +28,7 @@ let ctx2 = canvas2.getContext("2d");
 let r = 5;
 //let fy = .2;
 let fireBalls = [];
-let fireBallSpeed = .5;
+let fireBallSpeed = .3;
 let fireBallRate = 2000;
 let lastFireBall = -1;
 let colors = ["red", "green", "orange"];
@@ -70,6 +70,13 @@ function fireBallsDrop() {
             ctx.fill();
             ctx.closePath();
         }
+    }
+}
+
+function speedup() {
+    if(score > 2) {
+        //fireBallSpeed += .001;
+        fireBallRate -= 1;
     }
 }
 
@@ -155,6 +162,7 @@ function draw() {
     fireBallsDrop();
     warrior();
     strike();
+    speedup();
 
 
 
