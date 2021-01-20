@@ -92,10 +92,18 @@ function strike() {
                     score += 1;
                     document.getElementById("score-count").innerHTML = score;
                 }
-                else if (fireBall.y > canvas.height) {
+                else // if (fireBall.y > canvas.height) 
+                {
+                    fireBall.status = 0;
+                    lives -= 1;
+                    document.getElementById("live-count").innerHTML = lives;
+                    
+                    
+                    if(!lives) {
                     alert("Game Over");
                     document.location.reload();
                     clearInterval(interval);
+                    }
                 }
             }
         }
