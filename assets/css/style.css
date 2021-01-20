@@ -50,6 +50,13 @@ header {
     z-index: 1;
 }
 
+#lives {
+    position: fixed;
+    top: 40px;
+    left: 10px;
+    z-index: 1;
+}
+
 /* Contact Page */
 
 .contact-intro {
