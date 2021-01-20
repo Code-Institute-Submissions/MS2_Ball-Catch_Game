@@ -7,7 +7,7 @@ $(window).on("load", resizeCanvas());
 
 function resizeCanvas() {
     let canvas = $("#canvas");
-    let canvas2 = $("#warrior");
+    let canvas2 = $("#canvas2");
     canvas.css("width", $(window).width());
     canvas.css("height", $(window).height());
     canvas2.css("width", $(window).width());
@@ -20,7 +20,7 @@ document.addEventListener("keydown", keyDownHandler, false);
 document.addEventListener("keyup", keyUpHandler, false);
 
 let canvas = document.getElementById("canvas");
-let canvas2 = document.getElementById("warrior");
+let canvas2 = document.getElementById("canvas2");
 let ctx = canvas.getContext("2d");
 let ctx2 = canvas2.getContext("2d");
 //let x = Math.floor(Math.random() * (canvas.width - 5));
@@ -62,14 +62,14 @@ function createFireBalls() {
 function fireBallsDrop() {
     for (let i = 0; i < fireBalls.length; i++) {
         let fireBall = fireBalls[i];
-        if(fireBalls[i].status == 1) {
-        fireBall.y += fireBallSpeed;
-        ctx.beginPath();
-        ctx.arc(fireBall.x, fireBall.y, r, 0, Math.PI * 2);
-        ctx.fillStyle = fireBall.c;
-        ctx.fill();
-        ctx.closePath();       
-    }
+        if (fireBalls[i].status == 1) {
+            fireBall.y += fireBallSpeed;
+            ctx.beginPath();
+            ctx.arc(fireBall.x, fireBall.y, r, 0, Math.PI * 2);
+            ctx.fillStyle = fireBall.c;
+            ctx.fill();
+            ctx.closePath();
+        }
     }
 }
 
@@ -77,48 +77,47 @@ function strike() {
     for (let s = 0; s < fireBalls.length; s++) {
         let fireBall = fireBalls[s];
         fireBall.y += fireBallSpeed;
-        fireBall.x = fireBall.x;    
+        fireBall.x = fireBall.x;
         if (fireBall.status == 1) {
-        if (fireBall.y + fireBallSpeed > canvas.height - 50) {
+            if (fireBall.y + fireBallSpeed > canvas.height - 50) {
                 if (fireBall.x > warriorx && fireBall.x < warriorx + 80) {
-                    fireBall.status = 0; 
+                    fireBall.status = 0;
                     score += 1;
-            document.getElementById("score-count").innerHTML = score;
+                    document.getElementById("score-count").innerHTML = score;
                 }
-                else if (fireBall.y > canvas.height) 
-             {
-                alert("Game Over");
-                document.location.reload();
-                clearInterval(interval);
-             }
-            }    
-    }
-
-       
-    /*
-      if (fireBall.x > warriorx && fireBall.x < warriorx + warrior.length && fireBall.y == canvas.height - 20 ) {
-            score += 1;
-            document.getElementById("score-count").innerHTML = score;
-        } 
-        
-    else  if 
-      (fireBall.y > canvas.height) 
-             {
-                alert("Game Over");
-                document.location.reload();
-                clearInterval(interval);
-            }    */     
+                else if (fireBall.y > canvas.height) {
+                    alert("Game Over");
+                    document.location.reload();
+                    clearInterval(interval);
+                }
+            }
         }
-    }
 
-    
+
+        /*
+          if (fireBall.x > warriorx && fireBall.x < warriorx + warrior.length && fireBall.y == canvas.height - 20 ) {
+                score += 1;
+                document.getElementById("score-count").innerHTML = score;
+            } 
+            
+        else  if 
+          (fireBall.y > canvas.height) 
+                 {
+                    alert("Game Over");
+                    document.location.reload();
+                    clearInterval(interval);
+                }    */
+    }
+}
+
+
 
 function warrior() {
     //let canvas2 = document.getElementById("warrior");
-   // let ctx = canvas2.getContext("2d");
+    // let ctx = canvas2.getContext("2d");
     img = new Image();
-    img.onload = function() {
-        ctx2.clearRect(0, 0,  canvas.width, canvas.height);
+    img.onload = function () {
+        ctx2.clearRect(0, 0, canvas.width, canvas.height);
         ctx2.drawImage(img, warriorx, -20, 80, 200);
     }
     img.src = "assets/images/defender.png"
@@ -156,22 +155,22 @@ function draw() {
     fireBallsDrop();
     warrior();
     strike();
-    
-    
 
-    
+
+
+
 
     if (rightPressed) {
         warriorx += 7;
-         if (warriorx + 80 > canvas.width) {
-                    warriorx = canvas.width - 60;
-                }
+        if (warriorx + 80 > canvas.width) {
+            warriorx = canvas.width - 60;
+        }
     }
     else if (leftPressed) {
         warriorx -= 7;
         if (warriorx < 0) {
-                    warriorx = -20;
-                }
+            warriorx = -20;
+        }
     }
     requestAnimationFrame(draw);
 }
