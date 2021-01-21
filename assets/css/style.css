@@ -57,6 +57,20 @@ header {
     z-index: 1;
 }
 
+#move-right {
+    position: fixed;
+    bottom: 40px;
+    right: 10px;
+    z-index: 1;
+}
+
+#move-left {
+    position: fixed;
+    bottom: 40px;
+    left: 10px;
+    z-index: 1;
+}
+
 /* Contact Page */
 
 .contact-intro {
