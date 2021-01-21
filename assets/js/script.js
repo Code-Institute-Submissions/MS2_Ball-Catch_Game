@@ -39,7 +39,7 @@ let colors = ["red", "green", "orange"];
 let warriorx = (canvas.width - 80) / 2;
 let rightPressed = false;
 let leftPressed = false;
-let lives = 3;
+let lives = 100;
 let score = 0;
 
 
