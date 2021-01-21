@@ -18,6 +18,10 @@ document.getElementById("start-game").addEventListener("click", startGame);
 document.getElementById("start-game").addEventListener("click", draw);
 document.addEventListener("keydown", keyDownHandler, false);
 document.addEventListener("keyup", keyUpHandler, false);
+document.getElementById("move-right").addEventListener("click", moveright);
+document.getElementById("move-left").addEventListener("click", moveleft);
+
+
 
 let canvas = document.getElementById("canvas");
 let canvas2 = document.getElementById("canvas2");
@@ -74,7 +78,7 @@ function fireBallsDrop() {
 }
 
 function speedup() {
-    if(score > 2) {
+    if (score > 2) {
         //fireBallSpeed += .001;
         fireBallRate -= 1;
     }
@@ -92,17 +96,17 @@ function strike() {
                     score += 1;
                     document.getElementById("score-count").innerHTML = score;
                 }
-                else // if (fireBall.y > canvas.height) 
+                else
                 {
                     fireBall.status = 0;
                     lives -= 1;
                     document.getElementById("live-count").innerHTML = lives;
-                    
-                    
-                    if(!lives) {
-                    alert("Game Over");
-                    document.location.reload();
-                    clearInterval(interval);
+
+
+                    if (!lives) {
+                        alert("Game Over");
+                        document.location.reload();
+                        clearInterval(interval);
                     }
                 }
             }
@@ -138,6 +142,21 @@ function warrior() {
     img.src = "assets/images/defender.png"
 }
 
+function moveright() {
+    warriorx += 40;
+    if (warriorx + 80 > canvas.width) {
+        warriorx = canvas.width - 60;
+    }
+}
+
+function moveleft() {
+    warriorx -= 40;
+        if (warriorx < 0) {
+            warriorx = -20;
+        }
+}
+
+
 
 function keyDownHandler(e) {
     if (e.key == "Right" || e.key == "ArrowRight") {
@@ -171,7 +190,7 @@ function draw() {
     warrior();
     strike();
     speedup();
-
+    
 
 
 
