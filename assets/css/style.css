@@ -23,12 +23,15 @@ header {
 }
 
 #canvas {
-    background-color: aqua; /* testing canvas sizes */
+   /* background-color: aqua; /* testing canvas sizes */
+    background: url("../images/city.jpg") no-repeat;
+    background-size: cover;
+    background-position: center bottom;
     position: relative;
 } 
 
 #canvas2 {
-    background-color: green;
+    /*background-color: green;*/
     height: 20vh;
     position: absolute;
     left: 0;
