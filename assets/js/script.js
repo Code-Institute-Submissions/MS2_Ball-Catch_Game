@@ -1,7 +1,3 @@
-//$(function () {
-//  resizeCanvas();
-//});
-
 $(window).on("resize", resizeCanvas());
 $(window).on("load", resizeCanvas());
 
@@ -15,24 +11,11 @@ function resizeCanvas() {
 
 document.getElementById("game-area").classList.toggle("hidden");
 
-/*
-document.getElementById("start-game").addEventListener("click", startGame);
-document.getElementById("start-game").addEventListener("click", draw);
-document.addEventListener("keydown", keyDownHandler, false);
-document.addEventListener("keyup", keyUpHandler, false);
-document.getElementById("move-right").addEventListener("click", moveright);
-document.getElementById("move-left").addEventListener("click", moveleft);
-*/
-
-
 let canvas = document.getElementById("canvas");
 let canvas2 = document.getElementById("canvas2");
 let ctx = canvas.getContext("2d");
 let ctx2 = canvas2.getContext("2d");
-//let x = Math.floor(Math.random() * (canvas.width - 5));
-//let y = 5;
 let r = 5;
-//let fy = .2;
 let fireBalls = [];
 let fireBallSpeed = .3;
 let fireBallRate = 2000;
@@ -59,7 +42,6 @@ function startGame() {
     document.getElementById("home-footer").classList.toggle("hidden");
     document.getElementById("game-intro").classList.toggle("hidden");
 }
-
 
 function createFireBalls() {
     let color = colors[Math.floor(Math.random() * colors.length)];
@@ -100,7 +82,7 @@ function strike() {
         fireBall.x = fireBall.x;
         if (fireBall.status == 1) {
             if (fireBall.y + fireBallSpeed > canvas.height - 50) {
-                if (fireBall.x > warriorx && fireBall.x < warriorx + 80) {
+                if (fireBall.x > warriorx && fireBall.x < warriorx + 64) {
                     fireBall.status = 0;
                     score += 1;
                     document.getElementById("score-count").innerHTML = score;
@@ -119,42 +101,22 @@ function strike() {
                 }
             }
         }
-
-
-        /*
-          if (fireBall.x > warriorx && fireBall.x < warriorx + warrior.length && fireBall.y == canvas.height - 20 ) {
-                score += 1;
-                document.getElementById("score-count").innerHTML = score;
-            } 
-            
-        else  if 
-          (fireBall.y > canvas.height) 
-                 {
-                    alert("Game Over");
-                    document.location.reload();
-                    clearInterval(interval);
-                }    */
     }
 }
 
-
-
 function warrior() {
-    //let canvas2 = document.getElementById("warrior");
-    // let ctx = canvas2.getContext("2d");
     img = new Image();
     img.onload = function () {
         ctx2.clearRect(0, 0, canvas.width, canvas.height);
         ctx2.drawImage(img, warriorx, -20, 64, 256);
-        // ctx2.imageSmoothingEnabled = true;
     }
     img.src = "assets/images/defender.png"
 }
 
 function moveright() {
     warriorx += 40;
-    if (warriorx + 80 > canvas.width) {
-        warriorx = canvas.width - 60;
+    if (warriorx + 64 > canvas.width) {
+        warriorx = canvas.width - 45;
     }
 }
 
@@ -164,8 +126,6 @@ function moveleft() {
         warriorx = -20;
     }
 }
-
-
 
 function keyDownHandler(e) {
     if (e.key == "Right" || e.key == "ArrowRight") {
@@ -185,29 +145,22 @@ function keyUpHandler(e) {
     }
 }
 
-
 function draw() {
     let timeStamp = Date.now();
     if (timeStamp > (lastFireBall + fireBallRate)) {
         lastFireBall = timeStamp;
         createFireBalls();
     }
-    //requestAnimationFrame(draw);
     ctx.clearRect(0, 0, canvas.width, canvas.height);
-    //ctx2.clearRect(0, 0, canvas2.width, canvas2.height);
     fireBallsDrop();
     warrior();
     strike();
     speedup();
 
-
-
-
-
     if (rightPressed) {
         warriorx += 7;
-        if (warriorx + 80 > canvas.width) {
-            warriorx = canvas.width - 60;
+        if (warriorx + 64 > canvas.width) {
+            warriorx = canvas.width - 45;
         }
     }
     else if (leftPressed) {
@@ -218,61 +171,5 @@ function draw() {
     }
     requestAnimationFrame(draw);
 }
-
 eventListeners();
 
-//draw();
-
-/*
-
-function dropFireBalls() {
-    let timeStamp = Date.now();
-    if (timeStamp > (lastFireBall + fireBallRate)) {
-        lastFireBall = timeStamp;
-        createFireBalls();
-    }
-
-    requestAnimationFrame(dropFireBalls);
-    ctx.clearRect(0, 0, canvas.width, canvas.height);
-
-
-
-
-    for (let i = 0; i < fireBalls.length; i++) {
-        let fireBall = fireBalls[i];
-        fireBall.y += fireBallSpeed;
-        ctx.beginPath();
-        ctx.arc(fireBall.x, fireBall.y, r, 0, Math.PI * 2);
-        ctx.fillStyle = fireBall.c;
-        ctx.fill();
-        ctx.closePath();
-
-    }
-}
-dropFireBalls();
-
-*/
-/*
-let img = new Image();
-    img.src = "../images/defender.png";
-    ctx.drawImage(img, 15, 15);
-*/
-/*
-function drawFireBall() {
-    ctx.beginPath();
-    ctx.arc(x, y, r, 0, 2 * Math.PI);
-    ctx.fillStyle = "red";
-    ctx.fill();
-    ctx.closePath();
-}
-
-function draw() {
-    ctx.clearRect(0, 0, canvas.width, canvas.height);
-    drawFireBall();
-    y += fy;
-    requestAnimationFrame(draw);
-}
-
-draw();
-
-*/
