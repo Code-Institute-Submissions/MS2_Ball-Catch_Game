@@ -23,8 +23,8 @@ header {
 }
 
 #canvas {
-   /* background-color: aqua; /* testing canvas sizes */
-    background: url("../images/city.jpg") no-repeat;
+    /*background-color: aqua; /* testing canvas sizes */
+    background: url("../images/city3.jpg.png") no-repeat;
     background-size: cover;
     background-position: center bottom;
     position: relative;
@@ -67,7 +67,7 @@ header {
     z-index: 1;
     height: 100%;
     width: 50%;
-    opacity: .4;
+    opacity: .1;
 }
 
 #move-left {
@@ -79,7 +79,7 @@ header {
     width: 50%;
     height: 100%;
     width: 50%;
-    opacity: .4;
+    opacity: .1;
 }
 
 /* Contact Page */

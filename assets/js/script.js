@@ -137,7 +137,8 @@ function warrior() {
     img = new Image();
     img.onload = function () {
         ctx2.clearRect(0, 0, canvas.width, canvas.height);
-        ctx2.drawImage(img, warriorx, -20, 80, 200);
+        ctx2.drawImage(img, warriorx, -20, 64, 256);
+        // ctx2.imageSmoothingEnabled = true;
     }
     img.src = "assets/images/defender.png"
 }
