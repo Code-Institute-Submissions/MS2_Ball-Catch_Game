@@ -14,13 +14,15 @@ function resizeCanvas() {
 }
 
 document.getElementById("game-area").classList.toggle("hidden");
+
+/*
 document.getElementById("start-game").addEventListener("click", startGame);
 document.getElementById("start-game").addEventListener("click", draw);
 document.addEventListener("keydown", keyDownHandler, false);
 document.addEventListener("keyup", keyUpHandler, false);
 document.getElementById("move-right").addEventListener("click", moveright);
 document.getElementById("move-left").addEventListener("click", moveleft);
-
+*/
 
 
 let canvas = document.getElementById("canvas");
@@ -42,7 +44,14 @@ let leftPressed = false;
 let lives = 3;
 let score = 0;
 
-
+function eventListeners() {
+    document.getElementById("start-game").addEventListener("click", startGame);
+    document.getElementById("start-game").addEventListener("click", draw);
+    document.addEventListener("keydown", keyDownHandler, false);
+    document.addEventListener("keyup", keyUpHandler, false);
+    document.getElementById("move-right").addEventListener("click", moveright);
+    document.getElementById("move-left").addEventListener("click", moveleft);
+}
 
 function startGame() {
     document.getElementById("game-area").classList.toggle("hidden");
@@ -96,8 +105,7 @@ function strike() {
                     score += 1;
                     document.getElementById("score-count").innerHTML = score;
                 }
-                else
-                {
+                else {
                     fireBall.status = 0;
                     lives -= 1;
                     document.getElementById("live-count").innerHTML = lives;
@@ -152,9 +160,9 @@ function moveright() {
 
 function moveleft() {
     warriorx -= 40;
-        if (warriorx < 0) {
-            warriorx = -20;
-        }
+    if (warriorx < 0) {
+        warriorx = -20;
+    }
 }
 
 
@@ -191,7 +199,7 @@ function draw() {
     warrior();
     strike();
     speedup();
-    
+
 
 
 
@@ -210,6 +218,8 @@ function draw() {
     }
     requestAnimationFrame(draw);
 }
+
+eventListeners();
 
 //draw();
 
