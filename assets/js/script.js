@@ -83,14 +83,13 @@ function didNinjaStrike(fireBall, warriorx, fireBall, warriorx) {
     return (fireBall.x > warriorx && fireBall.x < warriorx + 64);
 }
 
-function updateScore() {
+function updateScore(fireBall) {
         fireBall.status = 0;
         score += 1;
         document.getElementById("score-count").innerHTML = score;
 }
 
-function updateLives() {
-    let fireBall;
+function updateLives(fireBall) {
     fireBall.status = 0;
     lives -= 1;
     document.getElementById("live-count").innerHTML = lives;
@@ -108,6 +107,7 @@ function strike() {
         let fireBall = fireBalls[s];
         fireBall.y += fireBallSpeed;
         fireBall.x = fireBall.x;
+                
 
         if (fireBall.status != 1) {
             return false
@@ -118,15 +118,17 @@ function strike() {
         }
 
         if (didNinjaStrike(fireBall, warriorx, fireBall, warriorx)) {
-            updateScore();
+            updateScore(fireBall);
         }
         else {
-            if (!updateLives()) {
+            if (!updateLives(fireBall)) {
                 gameOver();
             }
+            
         }
     }
 }
+
         
 
 
