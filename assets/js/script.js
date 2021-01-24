@@ -75,6 +75,62 @@ function speedup() {
     }
 }
 
+function isFireBallAlive(fireBall, fireBallSpeed, canvas) {
+    return (fireBall.y + fireBallSpeed > canvas.height - 50);
+}
+
+function didNinjaStrike(fireBall, warriorx, fireBall, warriorx) {
+    return (fireBall.x > warriorx && fireBall.x < warriorx + 64);
+}
+
+function updateScore() {
+        fireBall.status = 0;
+        score += 1;
+        document.getElementById("score-count").innerHTML = score;
+}
+
+function updateLives() {
+    let fireBall;
+    fireBall.status = 0;
+    lives -= 1;
+    document.getElementById("live-count").innerHTML = lives;
+    return lives;
+}
+
+function gameOver() { 
+    alert("Game Over");
+    document.location.reload();
+    clearInterval(interval);
+}
+
+function strike() {
+    for (let s = 0; s < fireBalls.length; s++) {
+        let fireBall = fireBalls[s];
+        fireBall.y += fireBallSpeed;
+        fireBall.x = fireBall.x;
+
+        if (fireBall.status != 1) {
+            return false
+        }
+
+        if (!isFireBallAlive(fireBall, fireBallSpeed, canvas)) {
+            return false;
+        }
+
+        if (didNinjaStrike(fireBall, warriorx, fireBall, warriorx)) {
+            updateScore();
+        }
+        else {
+            if (!updateLives()) {
+                gameOver();
+            }
+        }
+    }
+}
+        
+
+
+/*
 function strike() {
     for (let s = 0; s < fireBalls.length; s++) {
         let fireBall = fireBalls[s];
@@ -103,6 +159,7 @@ function strike() {
         }
     }
 }
+*/
 
 function warrior() {
     img = new Image();
@@ -172,4 +229,3 @@ function draw() {
     requestAnimationFrame(draw);
 }
 eventListeners();
-
