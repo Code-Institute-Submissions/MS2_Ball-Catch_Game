@@ -1,7 +1,41 @@
 /* Header */
 
 header {
-    background-color: rgb(39, 36, 36);
+    background-color: transparent;
+    color: #f0f8ffbd;
+}
+
+/* Footer */
+
+footer {
+    background-color: transparent;
+    color: #f0f8ffbd;
+}
+
+.social-link {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.social-link-item {
+  display: inline-block;
+  padding-right: 40px;
+  font-size: 30px;
+}
+
+.fab {
+    color: #f0f8ffbd;
+}
+
+.copyright {
+    margin-top: 5px;
+}
+
+.footer-content {
+  text-align: center;
+}
+
+.pic-source {
     color: #f0f8ffbd;
 }
 
@@ -10,7 +44,7 @@ header {
 #game-intro{
     background: url("../images/home.png") no-repeat;
     background-size: cover;
-    height: 95vh;
+    height: 100vh;
     /*background-position: center bottom;*/
 } 
 
