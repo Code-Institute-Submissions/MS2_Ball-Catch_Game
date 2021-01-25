@@ -7,9 +7,15 @@ header {
 
 /* Home Page */
 
+#game-intro{
+    background: url("../images/home.png") no-repeat;
+    background-size: cover;
+    height: 95vh;
+    /*background-position: center bottom;*/
+} 
+
 .instruction {
     padding-top: 75px;
-    background-color: red;
 }
 
 .hidden {
