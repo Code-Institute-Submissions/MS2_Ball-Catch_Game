@@ -21,7 +21,7 @@ let fireBallSpeed = .3;
 let fireBallRate = 2000;
 let lastFireBall = -1;
 let colors = ["red", "green", "orange"];
-let warriorx = (canvas.width - 80) / 2;
+let warriorx = (canvas.width - 64) / 2;
 let rightPressed = false;
 let leftPressed = false;
 let lives = 3;
@@ -85,12 +85,12 @@ function didNinjaStrike(fireBall, warriorx, fireBall, warriorx) {
 
 function updateScore(fireBall) {
         fireBall.status = 0;
-        score += 1;
+        score ++;
         document.getElementById("score-count").innerHTML = score;
 }
 
-function updateLives(fireBall) {
-    fireBall.status = 0;
+function updateLives() {
+    //fireBall.status = 0;
     lives -= 1;
     document.getElementById("live-count").innerHTML = lives;
     return lives;
@@ -105,29 +105,28 @@ function gameOver() {
 function strike() {
     for (let s = 0; s < fireBalls.length; s++) {
         let fireBall = fireBalls[s];
-        fireBall.y += fireBallSpeed;
-        fireBall.x = fireBall.x;
+        //fireBall.y += fireBallSpeed;
+        //fireBall.x = fireBall.x;
+               
                 
-
         if (fireBall.status != 1) {
-            return false
+            return false;
         }
 
         if (!isFireBallAlive(fireBall, fireBallSpeed, canvas)) {
             return false;
         }
-
+        
         if (didNinjaStrike(fireBall, warriorx, fireBall, warriorx)) {
             updateScore(fireBall);
         }
         else {
-            if (!updateLives(fireBall)) {
+            if (!updateLives()) {
                 gameOver();
-            }
-            
-        }
-    }
-}
+            }            
+        } 
+    } 
+} 
 
         
 
