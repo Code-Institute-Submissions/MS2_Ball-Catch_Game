@@ -34,6 +34,7 @@ function eventListeners() {
     document.addEventListener("keyup", keyUpHandler, false);
     document.getElementById("move-right").addEventListener("click", moveright);
     document.getElementById("move-left").addEventListener("click", moveleft);
+    document.getElementById("reset").addEventListener("click", tryAgain);
 }
 
 function startGame() {
@@ -98,9 +99,23 @@ function updateLives() {
 }
 
 function gameOver() { 
-    alert("Game Over");
-    document.location.reload();
-    clearInterval(interval);
+    //alert("Game Over");
+    document.getElementById("game-area").classList.toggle("hidden");
+    document.getElementById("home-header").classList.toggle("hidden");
+    document.getElementById("home-footer").classList.toggle("hidden");
+    document.getElementById("game-intro").classList.toggle("hidden");
+    document.getElementById("reset").classList.toggle("hidden");
+    document.getElementById("start-game").classList.toggle("hidden");
+    document.getElementById("intro").classList.toggle("hidden");
+    document.getElementById("game-over").innerHTML = "GAME OVER!!!!!";
+    document.getElementById("end-score").innerHTML = "You Scored " + score + "!! Better luck next time!! ";
+
+    //document.location.reload();
+    //clearInterval(interval);
+}
+
+function tryAgain() {
+    location.reload();
 }
 
 function strike() {
