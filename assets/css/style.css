@@ -107,7 +107,7 @@ footer {
     z-index: 1;
     height: 100%;
     width: 50%;
-    opacity: .1;
+    opacity: 0;
 }
 
 #move-left {
@@ -119,7 +119,7 @@ footer {
     width: 50%;
     height: 100%;
     width: 50%;
-    opacity: .1;
+    opacity: 0;
 }
 
 /* Contact Page */
