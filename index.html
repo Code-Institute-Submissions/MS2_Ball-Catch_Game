@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Catch the Ball</title>
+    <title>Save Our City!!</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
         integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
@@ -15,7 +15,7 @@
 <body>
     <header class="fixed-top" id="home-header">
         <nav class="navbar">
-            <h1>Catch the Ball!!</h1>
+            <h1>Save Our City!!</h1>
             <a href="contact.html">
                 <button class="ml-auto contact-button"><i class="fas fa-envelope"></i> Contact</button>
             </a>
@@ -26,17 +26,23 @@
             <div class="row justify-content-center">
                 <div class="col-md-6">
                     <div>
-                        <p id="intro">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptates magnam soluta totam
-                            natus quibusdam
-                            et hic, possimus nostrum ipsa laudantium reprehenderit dolore minima, adipisci iste, fuga
-                            debitis sint
-                            fugiat architecto.</p>
+                        <p id="intro">....an attack is imminent. Earth is no longer safe. You are the last remainig
+                            defender of earth. Can you prevent the fireballs from destroying our city??</p>
                     </div>
                     <div>
-                        <button id="start-game">Start Game</button>
+                        <p id="controls">Use the left and right keys to move the ninja and prevent the fireballs from
+                            hitting the ground. On mobile or table, tap anywhere on the left or right to move the ninja
+                            in that direction. <br>
+                            Good luck!! We're all counting on you!!
+                        </p>
                     </div>
                 </div>
             </div>
+            <div class="row">
+                    <div class="col-12 text-center start-button">
+                        <button id="start-game" class="btn btn-danger">Start Game</button>
+                    </div>
+                    </div>
         </div>
         <div class="container-fluid game-end">
             <div class="row justify-content-center">
@@ -96,7 +102,7 @@
             <h3>Lives</h3>
             <p id="live-count">3</p>
         </div>
-       
+
         <button id="move-right">Right</button>
         <button id="move-left">Left</button>
         <canvas id="canvas">

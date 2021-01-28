@@ -56,7 +56,13 @@ footer {
 
 .instruction {
     padding-top: 75px;
+    color: #f0f8ffbd;
 }
+
+/*
+.start-button {
+    color: red;
+} */
 
 .hidden {
     display: none;
