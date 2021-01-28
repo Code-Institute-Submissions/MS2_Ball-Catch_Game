@@ -5,7 +5,7 @@ header {
     color: #f0f8ffbd;
 }
 
-.home-button {
+.home-button, .contact-button {
     color: #f0f8ffbd;
     background-color: transparent;
     border: none;
@@ -156,7 +156,7 @@ footer {
   color: #000000;
 }
 
-.contact-button {
+.submit-button {
   background-color: rgba(206, 15, 15, 0.7);
 }
 
