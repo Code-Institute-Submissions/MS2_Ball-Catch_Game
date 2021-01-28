@@ -5,6 +5,12 @@ header {
     color: #f0f8ffbd;
 }
 
+.home-button {
+    color: #f0f8ffbd;
+    background-color: transparent;
+    border: none;
+}
+
 /* Footer */
 
 footer {
@@ -135,16 +141,13 @@ footer {
     background-size: cover;
     height: 100vh;
 } 
-/*
-.contact-area {
-    padding-top: 400px;
-}*/
 
 .contact-form {
   width: 400px;
   max-width: 85vw;
   margin: auto;
-  padding-top: 20vh;
+  margin-top: 100px;
+  margin-bottom: 40px;
 }
 
 .form-item {
@@ -155,4 +158,30 @@ footer {
 
 .contact-button {
   background-color: rgba(206, 15, 15, 0.7);
+}
+
+.contact-blog {
+  width: 150px;
+  max-width: 85vw;
+  margin: auto;
+  color: rgba(206, 15, 15, 0.7);
+  font-weight: 900;
+  background-color: rgba(241, 234, 234, 0.7);
+  opacity: .9;
+}
+
+.comm {
+    font-size: large;
+}
+
+.pic-source {
+    color: black;
+}
+
+/* Media Queries */
+
+@media only screen and (min-width: 992px) {
+  .contact-blog, .contact-form {
+    margin-top: 20vh;
+  }
 }
