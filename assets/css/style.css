@@ -9,10 +9,15 @@ header {
     color: #f0f8ffbd;
     background-color: transparent;
     border: none;
+    font-family: 'Josefin Sans', sans-serif;
 }
 
 nav a button:hover {
     color: rgba(206, 15, 15, 0.7);
+}
+
+h1 {
+    font-family: 'Londrina Solid', cursive;
 }
 
 
@@ -44,6 +49,7 @@ footer {
 
 .copyright {
     margin-top: 5px;
+    font-family: 'Josefin Sans', sans-serif;
 }
 
 .footer-content {
@@ -71,6 +77,7 @@ footer {
 
 #start-game {
     background-color: black;
+    font-family: 'Potta One', cursive;
 } 
 
 #start-game:hover {
@@ -178,6 +185,7 @@ footer {
 
 .submit-button {
   background-color: black;
+  font-family: 'Potta One', cursive;
 }
 
 .submit-button:hover {
