@@ -70,9 +70,21 @@ function fireBallsDrop() {
 }
 
 function speedup() {
-    if (score > 2) {
-        //fireBallSpeed += .001;
+    if (score > 10) {
+        fireBallSpeed = 1;
         //fireBallRate -= 1;
+    }
+    if (score > 20) {
+        fireBallSpeed = 1.5;
+    }
+    if (score > 30) {
+        fireBallSpeed = 2;
+    }
+    if (score > 40) {
+        fireBallSpeed = 2.5;
+    }
+    if (score > 50) {
+        fireBallSpeed = 3;
     }
 }
 
