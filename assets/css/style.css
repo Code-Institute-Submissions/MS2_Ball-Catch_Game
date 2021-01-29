@@ -38,6 +38,10 @@ footer {
     color: #f0f8ffbd;
 }
 
+.fab:hover {
+    color: rgba(206, 15, 15, 0.7);
+}
+
 .copyright {
     margin-top: 5px;
 }
@@ -167,7 +171,8 @@ footer {
 
 .form-item {
   margin-bottom: 3px;
-  background: rgba(241, 234, 234, 0.7);
+  background: #f0f8ffbd;
+  opacity: .7;
   color: #000000;
 }
 
@@ -185,7 +190,7 @@ footer {
   margin: auto;
   color: rgba(206, 15, 15, 0.7);
   font-weight: 900;
-  background-color: rgba(241, 234, 234, 0.7);
+  background-color: #f0f8ffbd;
   opacity: .9;
 }
 
