@@ -107,6 +107,7 @@ function gameOver() {
     document.getElementById("reset").classList.toggle("hidden");
     document.getElementById("start-game").classList.toggle("hidden");
     document.getElementById("intro").classList.toggle("hidden");
+    document.getElementById("controls").classList.toggle("hidden");
     document.getElementById("game-over").innerHTML = "GAME OVER!!!!!";
     document.getElementById("end-score").innerHTML = "You Scored " + score + "!! Better luck next time!! ";
 
