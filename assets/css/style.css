@@ -11,6 +11,11 @@ header {
     border: none;
 }
 
+nav a button:hover {
+    color: rgba(206, 15, 15, 0.7);
+}
+
+
 /* Footer */
 
 footer {
@@ -59,10 +64,14 @@ footer {
     color: #f0f8ffbd;
 }
 
-/*
-.start-button {
-    color: red;
-} */
+
+#start-game {
+    background-color: black;
+} 
+
+#start-game:hover {
+    background-color: rgba(206, 15, 15, 0.7);
+}
 
 .hidden {
     display: none;
@@ -163,6 +172,10 @@ footer {
 }
 
 .submit-button {
+  background-color: black;
+}
+
+.submit-button:hover {
   background-color: rgba(206, 15, 15, 0.7);
 }
 
