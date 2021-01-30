@@ -6,10 +6,10 @@ function sendMail(gamerContact) {
     })
    .then(
         function (response) {
-            console.log("SUCCESS", response);
+            writeToConsole(response, "Success");
         },
         function (error) {
-            console.log("FAILED", error);
+            writeToConsole(error, "Failed");
         })
     .then(function () {
         gamerContact.reset();
