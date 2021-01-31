@@ -24,8 +24,12 @@ h1, h3 {
 /* Footer */
 
 footer {
-    background-color: transparent;
+    background-color: #000000;
     color: #f0f8ffbd;
+    display: block;
+    padding-top: 30px;
+    border-top-style: solid;
+    border-top-color: rgb(206, 15, 15);
 }
 
 .social-link {
@@ -190,18 +194,17 @@ footer {
     background-color: red;
 } */
 
-#contact-section{
+#contact-section {
     background: url("../images/contact.jpg") no-repeat;
     background-size: cover;
-    height: 100vh;
 } 
 
 .contact-form {
   width: 400px;
   max-width: 85vw;
   margin: auto;
-  margin-top: 100px;
-  margin-bottom: 40px;
+  margin-top: 75px;
+  margin-bottom: 5px;
 }
 
 .form-item {
@@ -223,6 +226,7 @@ footer {
   width: 150px;
   max-width: 85vw;
   margin: auto;
+  margin-bottom: 100px;
 }
 
 .contact-blog {
@@ -234,10 +238,13 @@ footer {
     padding-left: 20px;
     padding-right: 5px;
     padding-top: 5px;
+    padding-bottom: 50px;
 }
 
 .comm {
     font-size: large;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
 }
 
 .pic-source {
@@ -247,14 +254,16 @@ footer {
 /* Media Queries */
 
 @media only screen and (min-width: 992px) {
+  #intro, #controls {
+    margin-top: 10vh;
+  }
+  #contact-section {
+      height: 100vh;
+  }
   .contact-blog, .contact-form {
     margin-top: 20vh;
   }
 }
 
-@media only screen and (min-width: 992px) {
-  #intro, #controls {
-    margin-top: 10vh;
-  }
-}
+
 
