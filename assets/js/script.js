@@ -18,7 +18,7 @@ let ctx = canvas.getContext("2d");
 let ctx2 = canvas2.getContext("2d");
 let r = 5;
 let fireBalls = [];
-let fireBallSpeed = .5;
+let fireBallSpeed = 0.5;
 let fireBallRate = 2000;
 let lastFireBall = -1;
 let colors = ["red", "green", "orange", "Blue", "Purple", "Pink"];
@@ -53,7 +53,7 @@ function createFireBalls() {
         x: Math.random() * (canvas.width - 10) + 5,
         y: 5,
         status: 1,
-    }
+    };
     fireBalls.push(fireBall);
 }
 
@@ -172,8 +172,8 @@ function warrior() {
         ctx.imageSmoothingEnabled = false;
         ctx2.clearRect(0, 0, canvas.width, canvas.height);
         ctx2.drawImage(img, warriorx, warriory, 70, 60);
-    }
-    img.src = "assets/images/defender_v2.png"
+    };
+    img.src = "assets/images/defender_v2.png";
 }
 
 function moveright() {
@@ -235,4 +235,3 @@ function draw() {
     requestAnimationFrame(draw);
 }
 eventListeners();
-ss
