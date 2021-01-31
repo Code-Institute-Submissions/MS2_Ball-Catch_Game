@@ -130,7 +130,7 @@ footer {
 
 #canvas {
     /*background-color: aqua; /* testing canvas sizes */
-    background: url("../images/city3.jpg.png") no-repeat;
+    background: url("../images/city.jpg") no-repeat;
     background-size: cover;
     background-position: center bottom;
     position: relative;
@@ -157,6 +157,7 @@ footer {
     top: 40px;
     right: 10px;
     z-index: 1;
+    color: #f0f8ffbd;
 }
 
 #lives {
@@ -164,6 +165,7 @@ footer {
     top: 40px;
     left: 10px;
     z-index: 1;
+    color: #f0f8ffbd;
 }
 
 #move-right {
