@@ -237,7 +237,7 @@ footer {
 
 /* Media Queries */
 
-@media only screen and (min-width: 576px) {
+@media only screen and (min-width: 992px) {
   #intro, #controls {
     margin-top: 10vh;
   }
