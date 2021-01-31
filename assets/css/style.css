@@ -74,13 +74,8 @@ footer {
     color: #f0f8ffbd;
 }
 
-#intro {
-    margin-top: 55px;
-}
 
-#controls {
-    margin-top: 75px;
-}
+
 
 #controls > p, #intro > p {
     font-family: 'Josefin Sans', sans-serif;
@@ -137,7 +132,7 @@ footer {
 
 #canvas2 {
     /*background-color: green;*/
-    height: 20vh;
+    /*height: 20vh;*/
     position: absolute;
     left: 0;
     bottom: 0;
@@ -256,3 +251,10 @@ footer {
     margin-top: 20vh;
   }
 }
+
+@media only screen and (min-width: 992px) {
+  #intro, #controls {
+    margin-top: 10vh;
+  }
+}
+

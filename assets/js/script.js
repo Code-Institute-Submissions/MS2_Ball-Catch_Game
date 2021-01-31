@@ -7,6 +7,7 @@ function resizeCanvas() {
     canvas.css("width", $(window).width());
     canvas.css("height", $(window).height());
     canvas2.css("width", $(window).width());
+    canvas2.css("height", $(window).height());
 }
 
 document.getElementById("game-area").classList.toggle("hidden");
@@ -22,6 +23,7 @@ let fireBallRate = 2000;
 let lastFireBall = -1;
 let colors = ["red", "green", "orange", "Blue", "Purple", "Pink"];
 let warriorx = (canvas.width - 64) / 2;
+let warriory = (canvas.height - 50);
 let rightPressed = false;
 let leftPressed = false;
 let lives = 3;
@@ -197,8 +199,9 @@ function strike() {
 function warrior() {
     img = new Image();
     img.onload = function () {
+        ctx.imageSmoothingEnabled = true;
         ctx2.clearRect(0, 0, canvas.width, canvas.height);
-        ctx2.drawImage(img, warriorx, -20, 64, 256);
+        ctx2.drawImage(img, warriorx, warriory, 60, 60);
     }
     img.src = "assets/images/defender.png"
 }
