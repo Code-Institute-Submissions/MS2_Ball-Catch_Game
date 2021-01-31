@@ -7,6 +7,5 @@ function writeToConsole(messageString, status) {
         else {
             console.error(messageString);
         }
-    
     }
 }

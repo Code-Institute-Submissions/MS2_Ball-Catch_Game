@@ -13,6 +13,6 @@ function sendMail(gamerContact) {
         })
     .then(function () {
         gamerContact.reset();
-    })
+    });
     return false;
 }
