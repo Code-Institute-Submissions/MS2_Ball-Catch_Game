@@ -199,11 +199,11 @@ function strike() {
 function warrior() {
     img = new Image();
     img.onload = function () {
-        ctx.imageSmoothingEnabled = true;
+        ctx.imageSmoothingEnabled = false;
         ctx2.clearRect(0, 0, canvas.width, canvas.height);
-        ctx2.drawImage(img, warriorx, warriory, 60, 60);
+        ctx2.drawImage(img, warriorx, warriory, 70, 60);
     }
-    img.src = "assets/images/defender.png"
+    img.src = "assets/images/defender_v2.png"
 }
 
 function moveright() {
