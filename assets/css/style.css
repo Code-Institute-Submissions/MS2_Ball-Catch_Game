@@ -107,6 +107,7 @@ footer {
 #reset {
     background-color: black;
     font-family: 'Potta One', cursive;
+    border-bottom-width: 45px;
 } 
 
 #start-game:hover {
@@ -260,12 +261,11 @@ footer {
   }
 }
 
-@media (max-width: 400px) { 
-    #game-intro {
+@media (max-width: 576px) { 
+    body {
         background-color: #000000;
         background-size: cover;
-        background-image: none;
-        background-repeat: repeat-y;
+        background-repeat: repeat;
     }
  }
 
