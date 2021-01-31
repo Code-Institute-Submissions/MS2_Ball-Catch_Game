@@ -91,11 +91,11 @@ function speedup() {
 }
 
 function isFireBallAlive(fireBall, fireBallSpeed, canvas) {
-    return (fireBall.y + fireBallSpeed > canvas.height - 50);
+    return (fireBall.y + fireBallSpeed > canvas.height - 40);
 }
 
 function didNinjaStrike(fireBall, warriorx, fireBall, warriorx) {
-    return (fireBall.x > warriorx && fireBall.x < warriorx + 64);
+    return (fireBall.x > warriorx && fireBall.x < warriorx + 60);
 }
 
 function updateScore() {
