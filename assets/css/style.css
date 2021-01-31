@@ -60,10 +60,6 @@ footer {
   text-align: center;
 }
 
-.pic-source {
-    color: #f0f8ffbd;
-}
-
 /* Home Page */
 
 #game-intro{
@@ -177,9 +173,8 @@ footer {
     position: fixed;
     bottom: 0;
     z-index: 1;
-    height: 20vh;
-    width: 50%;
     height: 100%;
+    width: 50%;
     width: 50%;
     opacity: 0;
 }
@@ -215,18 +210,15 @@ footer {
 }
 
 .contact-blog {
-  width: 150px;
-  max-width: 85vw;
-  margin: auto;
-  margin-bottom: 100px;
-}
-
-.contact-blog {
     font-family: 'Josefin Sans', sans-serif;
     font-size: large;
     color: rgb(206, 15, 15);
     background-color: rgba(240, 248, 255, 0.5);
     border-radius: 30px;
+    width: 150px;
+    max-width: 85vw;
+    margin: auto;
+    margin-bottom: 100px;
     padding-left: 20px;
     padding-right: 5px;
     padding-top: 5px;
@@ -256,6 +248,7 @@ footer {
     margin-top: 20vh;
   }
 }
+
 
 
 
