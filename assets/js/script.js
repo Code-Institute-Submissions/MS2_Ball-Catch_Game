@@ -74,7 +74,6 @@ function fireBallsDrop() {
 function speedup() {
     if (score > 10) {
         fireBallSpeed = 1;
-        //fireBallRate -= 1;
     }
     if (score > 20) {
         fireBallSpeed = 1.5;
@@ -105,7 +104,6 @@ function updateScore() {
 }
 
 function updateLives() {
-    //fireBall.status = 0;
     fireBalls.splice(0, 1);
     lives -= 1;
     document.getElementById("live-count").innerHTML = lives;
@@ -113,7 +111,6 @@ function updateLives() {
 }
 
 function gameOver() {
-    //alert("Game Over");
     document.getElementById("game-area").classList.toggle("hidden");
     document.getElementById("home-header").classList.toggle("hidden");
     document.getElementById("home-footer").classList.toggle("hidden");
@@ -124,9 +121,6 @@ function gameOver() {
     document.getElementById("controls").classList.toggle("hidden");
     document.getElementById("game-over").innerHTML = "GAME OVER!!!!!";
     document.getElementById("end-score").innerHTML = "You prevented " + score + " hits to the city. Well done!! Take a break and get back out there when ready! ";
-
-    //document.location.reload();
-    //clearInterval(interval);
 }
 
 function tryAgain() {
@@ -136,10 +130,7 @@ function tryAgain() {
 function strike() {
     for (let s = 0; s < fireBalls.length; s++) {
         let fireBall = fireBalls[s];
-        //fireBall.y += fireBallSpeed;
-        //fireBall.x = fireBall.x;
-
-
+        
         if (fireBall.status != 1) {
             return false;
         }
@@ -149,8 +140,6 @@ function strike() {
         }
 
         if (didNinjaStrike(fireBall, warriorx, fireBall, warriorx)) {
-            console.log("Collide");
-            //fireBalls.splice(s,1);
             updateScore();
         }
 
@@ -161,40 +150,6 @@ function strike() {
         }
     }
 }
-
-
-
-
-/*
-function strike() {
-    for (let s = 0; s < fireBalls.length; s++) {
-        let fireBall = fireBalls[s];
-        fireBall.y += fireBallSpeed;
-        fireBall.x = fireBall.x;
-        if (fireBall.status == 1) {
-            if (fireBall.y + fireBallSpeed > canvas.height - 50) {
-                if (fireBall.x > warriorx && fireBall.x < warriorx + 64) {
-                    fireBall.status = 0;
-                    score += 1;
-                    document.getElementById("score-count").innerHTML = score;
-                }
-                else {
-                    fireBall.status = 0;
-                    lives -= 1;
-                    document.getElementById("live-count").innerHTML = lives;
-
-
-                    if (!lives) {
-                        alert("Game Over");
-                        document.location.reload();
-                        clearInterval(interval);
-                    }
-                }
-            }
-        }
-    }
-}
-*/
 
 function warrior() {
     img = new Image();
@@ -265,3 +220,4 @@ function draw() {
     requestAnimationFrame(draw);
 }
 eventListeners();
+ss
