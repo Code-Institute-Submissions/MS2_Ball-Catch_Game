@@ -20,7 +20,6 @@ h1, h3 {
     font-family: 'Londrina Solid', cursive;
 }
 
-
 /* Footer */
 
 footer {
@@ -71,7 +70,6 @@ footer {
     background: url("../images/home.png") no-repeat;
     background-size: cover;
     height: 100vh;
-    /*background-position: center bottom;*/
 } 
 
 .instruction {
@@ -130,7 +128,6 @@ footer {
 }
 
 #canvas {
-    /*background-color: aqua; /* testing canvas sizes */
     background: url("../images/city.jpg") no-repeat;
     background-size: cover;
     background-position: center bottom;
@@ -138,13 +135,10 @@ footer {
 } 
 
 #canvas2 {
-    /*background-color: green;*/
-    /*height: 20vh;*/
     position: absolute;
     left: 0;
     bottom: 0;
 } 
-
 
 #game-home {
     position: fixed;
@@ -182,7 +176,6 @@ footer {
 #move-left {
     position: fixed;
     bottom: 0;
-   /* left: 10px; */
     z-index: 1;
     height: 20vh;
     width: 50%;
@@ -192,12 +185,6 @@ footer {
 }
 
 /* Contact Page */
-
-/*
-.contact-intro {
-    padding-top: 75px;
-    background-color: red;
-} */
 
 #contact-section {
     background: url("../images/contact.jpg") no-repeat;
