@@ -65,19 +65,19 @@ Below this are the instructions on how to play the game and the "start", button.
 The footer contains social media links of the developer.
 
 ##### Home page - Desktop
-![Home Desktop Wireframe](/readme_images/home.desktop.png)
+![Home Desktop Wireframe](/readme_images/home.desktop1.png)
 
 ##### Home page - Mobile
-![Home Mobile Wireframe](/readme_images/home.mobile.png)
+![Home Mobile Wireframe](/readme_images/home.mobile1.png)
 
 The game takes up the screen once started. The score is displayed 
 top right and the lives count top left. 
 
 ##### Game page - Desktop
-![Game Desktop Wireframe](/readme_images/game.desktop.png)
+![Game Desktop Wireframe](/readme_images/game.desktop1.png)
 
 ##### Game page - Mobile
-![Game Mobile Wireframe](/readme_images/game.mobile.png)
+![Game Mobile Wireframe](/readme_images/game.mobile1.png)
 
 The contact page contains a header with the name of the game and a Home button 
 to return to the home page.
@@ -86,7 +86,7 @@ In line with the home page, the footer contains the social media links of the
 developer.
 
 ##### Contact page - Desktop
-![Contact Desktop Wireframe](/readme_images/contact.desktop.png)
+![Contact Desktop Wireframe](/readme_images/contact.desktop1.png)
 
 ##### Contact page - Mobile
-![Contact Mobile Wireframe](/readme_images/contact.mobile.png)
+![Contact Mobile Wireframe](/readme_images/contact.mobile1.png)
