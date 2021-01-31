@@ -259,3 +259,11 @@ footer {
       padding-right: 20px;
   }
 }
+
+@media (max-width: 300px) { 
+    #game-intro {
+        background-color: #000000;
+        background-size: cover;
+        background-image: none;
+    }
+ }
