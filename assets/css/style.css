@@ -26,7 +26,7 @@ footer {
     background-color: #000000;
     color: #f0f8ffbd;
     display: block;
-    padding-top: 30px;
+    padding-top: 10px;
     border-top-style: solid;
     border-top-color: rgb(206, 15, 15);
 }
@@ -190,7 +190,7 @@ footer {
   width: 400px;
   max-width: 85vw;
   margin: auto;
-  margin-top: 75px;
+  margin-top: 150px;
   margin-bottom: 5px;
 }
 
@@ -218,6 +218,7 @@ footer {
     width: 150px;
     max-width: 85vw;
     margin: auto;
+    margin-top: 150px;
     margin-bottom: 100px;
     padding-left: 20px;
     padding-right: 5px;
@@ -244,12 +245,14 @@ footer {
   #contact-section {
       height: 100vh;
   }
-  .contact-blog, .contact-form {
-    margin-top: 20vh;
-
-  }
+  
 }
 
-
-
-
+@media only screen and (max-width: 768px) {
+  #intro, #controls {
+    margin-top: 0;
+  }
+  footer {
+      padding-top: 25px;
+  }
+}
