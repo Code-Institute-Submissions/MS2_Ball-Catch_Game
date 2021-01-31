@@ -79,9 +79,6 @@ footer {
     color: #f0f8ffbd;
 }
 
-
-
-
 #controls > p, #intro > p {
     font-family: 'Josefin Sans', sans-serif;
     font-size: large;
@@ -93,9 +90,13 @@ footer {
     padding-top: 5px;
 }
 
+.game-end {
+    padding-bottom: 80px;
+}
+
 #game-over {
     color: rgb(206, 15, 15);
-    margin-top: 30vh;
+    margin-top: 10vh;
 }
 
 #end-score {
