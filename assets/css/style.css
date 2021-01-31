@@ -107,7 +107,6 @@ footer {
 #reset {
     background-color: black;
     font-family: 'Potta One', cursive;
-    border-bottom-width: 45px;
 } 
 
 #start-game:hover {
@@ -258,6 +257,9 @@ footer {
   }
   .social-link-item {
       padding-right: 20px;
+  }
+  #reset {
+      margin-bottom: 45px;
   }
 }
 
