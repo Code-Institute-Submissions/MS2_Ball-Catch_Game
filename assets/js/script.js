@@ -97,20 +97,20 @@ function didNinjaStrike(fireBall, warriorx, fireBall, warriorx) {
 }
 
 function updateScore() {
-        fireBalls.splice(0,1);
-        score ++;
-        document.getElementById("score-count").innerHTML = score;
+    fireBalls.splice(0, 1);
+    score++;
+    document.getElementById("score-count").innerHTML = score;
 }
 
 function updateLives() {
     //fireBall.status = 0;
-    fireBalls.splice(0,1);
+    fireBalls.splice(0, 1);
     lives -= 1;
     document.getElementById("live-count").innerHTML = lives;
     return lives;
 }
 
-function gameOver() { 
+function gameOver() {
     //alert("Game Over");
     document.getElementById("game-area").classList.toggle("hidden");
     document.getElementById("home-header").classList.toggle("hidden");
@@ -121,7 +121,7 @@ function gameOver() {
     document.getElementById("intro").classList.toggle("hidden");
     document.getElementById("controls").classList.toggle("hidden");
     document.getElementById("game-over").innerHTML = "GAME OVER!!!!!";
-    document.getElementById("end-score").innerHTML = "You Scored " + score + "!! Better luck next time!! ";
+    document.getElementById("end-score").innerHTML = "You prevented " + score + " hits to the city. Well done!! Take a break and get back out there when ready! ";
 
     //document.location.reload();
     //clearInterval(interval);
@@ -136,8 +136,8 @@ function strike() {
         let fireBall = fireBalls[s];
         //fireBall.y += fireBallSpeed;
         //fireBall.x = fireBall.x;
-               
-                
+
+
         if (fireBall.status != 1) {
             return false;
         }
@@ -145,22 +145,22 @@ function strike() {
         if (!isFireBallAlive(fireBall, fireBallSpeed, canvas)) {
             return false;
         }
-        
+
         if (didNinjaStrike(fireBall, warriorx, fireBall, warriorx)) {
-            console.log("Collide"); 
+            console.log("Collide");
             //fireBalls.splice(s,1);
             updateScore();
         }
-        
+
         else {
             if (!updateLives()) {
                 gameOver();
-            }            
-        } 
-    } 
-} 
+            }
+        }
+    }
+}
 
-        
+
 
 
 /*
