@@ -260,10 +260,13 @@ footer {
   }
 }
 
-@media (max-width: 300px) { 
+@media (max-width: 400px) { 
     #game-intro {
         background-color: #000000;
         background-size: cover;
         background-image: none;
+        background-repeat: repeat-y;
     }
  }
+
+ 
