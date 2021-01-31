@@ -5,14 +5,14 @@ header {
     color: #f0f8ffbd;
 }
 
-.home-button, .contact-button {
+.nav-link {
     color: #f0f8ffbd;
     background-color: transparent;
     border: none;
     font-family: 'Josefin Sans', sans-serif;
 }
 
-nav a button:hover {
+.nav-link:hover {
     color: rgba(206, 15, 15, 0.7);
 }
 
