@@ -35,6 +35,7 @@ footer {
 .social-link {
   margin-top: 5px;
   margin-bottom: 5px;
+  padding-bottom: 14px;
 }
 
 .social-link-item {
@@ -105,6 +106,7 @@ footer {
 #start-game {
     background-color: black;
     font-family: 'Potta One', cursive;
+    margin-bottom: 10px;
 } 
 
 #reset {
