@@ -87,6 +87,21 @@ function speedup() {
     if (score > 50) {
         fireBallSpeed = 3;
     }
+    if (score > 60) {
+        fireBallSpeed = 3.5;
+    }
+    if (score > 70) {
+        fireBallSpeed = 4;
+    }
+    if (score > 80) {
+        fireBallSpeed = 4.5;
+    }
+    if (score > 90) {
+        fireBallSpeed = 5;
+    }
+    if (score > 100) {
+        fireBallSpeed = 5.5;
+    }
 }
 
 function isFireBallAlive(fireBall, fireBallSpeed, canvas) {
