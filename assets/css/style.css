@@ -255,4 +255,7 @@ footer {
   footer {
       padding-top: 25px;
   }
+  .social-link-item {
+      padding-right: 20px;
+  }
 }
