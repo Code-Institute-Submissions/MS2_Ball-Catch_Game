@@ -31,7 +31,10 @@ lose the game, and track score. Aside from the game, the user will be able to co
 
 #### Structure
 
-The website will be delivered on two pages, where the home will become the game on game initiation, and the contact page.
+The website will be delivered on two pages
+
+1. Home page which will become the game page on initiation
+2. Contact page.
 
 #### Skeleton
 
@@ -152,26 +155,26 @@ developer.
 
 ![Home Page](/readme_images/index-html-validator-results.PNG)
 
-+   Two empty headings are there to take data from the game once over. 
+Two empty headings are there to take data from the game once over. 
 
 ![Contact Page](/readme_images/contact-html-validator-results.png)
 
-+   Two warnings on type attributes being unnecessary. I followed the Code Institute instruction on these types
+1.  Two warnings on type attributes being unnecessary. I followed the Code Institute instruction on these types
  and am happy they don't negatively impact my game.
-+   One warning WRT page lacking heading. This is intentional on my part as the page does not need it.
+2.   One warning WRT page lacking heading. This is intentional on my part as the page does not need it.
 
 - [css validator](https://jigsaw.w3.org/css-validator/) 
 
 ![css results](/readme_images/css-file-validator-results.PNG)
 
-+   No issues found.
+No issues found.
 
 - [JS Validator](https://jshint.com/)
 
-+   No errors. Warnings WRT let availability not an issue. 
+No errors. Warnings WRT let availability not an issue. 
 
 - [Reponsivity validator](http://ami.responsivedesign.is/#) - all of my pages opened on all the device sizes.
-- In addition, I opened each page and played the game on every device option in Developer tools.
+In addition, I opened each page and played the game on every device option in Developer tools.
 
 #### User Story Tests
 
@@ -188,6 +191,7 @@ The game controls are straightforward.
 The progress and result are easy to see.
 The game becomes more difficult based on the score and this created a will to beat my previous score.
 The contact function works and for completeness, I set up an auto reply.
+I clicked through each link to ensure it opened on a new tab and not take the user from the site.
 Along with this, I requested friends and family members to review and provide feedback. 
 The results were positive.
 
