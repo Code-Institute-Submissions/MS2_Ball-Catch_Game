@@ -29,7 +29,7 @@ let leftPressed = false;
 let lives = 3;
 let score = 0;
 
-function eventListeners() {
+function listenForEvents() {
     document.getElementById("start-game").addEventListener("click", startGame);
     document.getElementById("start-game").addEventListener("click", draw);
     document.addEventListener("keydown", keyDownHandler, false);
@@ -57,7 +57,7 @@ function createFireBalls() {
     fireBalls.push(fireBall);
 }
 
-function fireBallsDrop() {
+function dropFireBalls() {
     for (let i = 0; i < fireBalls.length; i++) {
         let fireBall = fireBalls[i];
         if (fireBalls[i].status == 1) {
@@ -71,7 +71,7 @@ function fireBallsDrop() {
     }
 }
 
-function speedup() {
+function speedUpBalls() {
     if (score > 10) {
         fireBallSpeed = 1;
     }
@@ -166,7 +166,7 @@ function strike() {
     }
 }
 
-function warrior() {
+function drawWarrior() {
     img = new Image();
     img.onload = function () {
         ctx.imageSmoothingEnabled = false;
@@ -215,10 +215,10 @@ function draw() {
         createFireBalls();
     }
     ctx.clearRect(0, 0, canvas.width, canvas.height);
-    fireBallsDrop();
-    warrior();
+    dropFireBalls();
+    drawWarrior();
     strike();
-    speedup();
+    speedUpBalls();
 
     if (rightPressed) {
         warriorx += 7;
@@ -234,4 +234,4 @@ function draw() {
     }
     requestAnimationFrame(draw);
 }
-eventListeners();
+listenForEvents();
